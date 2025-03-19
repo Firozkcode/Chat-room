@@ -99,12 +99,13 @@ socket.on("room-changed", (data) => {
     setTimeout(() => logoutUser(), 4000);
 });
 
-function sendMessage() {
-    const message = messageInput.value.trim();
-    if (message) {
-        socket.emit("user-message", { message, sender: currentUserName, roomKey: currentRoomKey });
-        messageInput.value = "";
-    }
+function sendMessage() {     
+    const message = messageInput.value.trim();     
+    if (message) {         
+        socket.emit("user-message", { message, sender: currentUserName, roomKey: currentRoomKey });         
+        messageInput.value = "";         
+        messageInput.focus(); // Keep the input field focused  
+    } 
 }
 
 sendBtn.addEventListener("click", sendMessage);
