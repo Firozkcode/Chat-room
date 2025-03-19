@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat app template</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="form.css">
+    <script type='module' src='https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js'></script>
+    <script nomodule src='https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js'></script>
+</head>
+<body>
+    <!-- <h1>Chat Room</h1> -->
+
+
+    <div class="box">
+        <form>
+          <h2>Login</h2>
+          <div class="inputBx">
+            <span></span>
+            <input type="text" id="username" placeholder="Enter your name" />
+          </div>
+          <div class="inputBx">
+            <span></span>
+            <input type="password" id="roomKey" placeholder="Enter room key" />
+          </div>
+          <div class="inputBx">
+            <input type="submit" id="joinBtn" value="Join Chat" />
+          </div>
+        
+        </form>
+      </div>
+
+
+    <!-- <div id="login">
+        <h2>User Login</h2>
+        <input type="text" id="username" placeholder="Enter your name">
+        <input type="password" id="roomKey" placeholder="Enter room key">
+        <button id="joinBtn">Join Chat</button>
+    </div> -->
+
+
+
+
+
+
+    <div id="chatroom" style="display: none;">
+        <div class="profile">
+            <div id="user-name">currentUserName</div>
+            <button id="logoutUser">Logout</button>
+        </div>
+        <div id="messages">
+            <p class="receiver">first: hiw</p>
+            <p class="sender">admin: ye</p>
+            <p class="receiver">chet: hiw</p>
+            <p class="sender">admin: ye</p>
+            <p class="receiver">chet: hiw</p>
+            <p class="sender">admin: ye</p>
+            <p class="sender">admin: ye</p>
+            <p class="sender">admin: ye</p>
+            <p class="receiver">chet: hiw</p>
+            <p class="sender">admin: ye</p>
+            <p class="receiver">chet: hiw</p>
+            <p class="sender">admin: ye</p>
+            <p class="sender">admin: ye</p>
+            <p class="sender">admin: ye</p>
+            <p class="receiver">chet: hiw</p>
+            <p class="connect">chet has left the chat</p>
+            <p class="connect">chet has joined the chat</p>
+            <p class="sender">admin: ye</p>
+            <p class="receiver">chet: hiw</p>
+            <p class="sender">admin: ye</p>
+            <p class="sender">admin: ye</p>
+            <p class="sender">admin: ye</p>
+            <p class="receiver">chet: hiw</p>
+            <p class="sender">admin: ye</p>
+            <p class="receiver">chet: hiw</p>
+            <p class="sender">admin: ye</p>
+            <p class="sender">Last: ye</p>
+        </div>
+        <div class="send-field">
+            <input type="text" id="message" placeholder="Enter Message">
+            <button id="sendBtn"><ion-icon name="send"></ion-icon></button>
+        </div>
+    </div>
+</body>
+</html>

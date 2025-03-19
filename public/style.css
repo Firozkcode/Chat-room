@@ -1,0 +1,285 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bg-color: #102542;
+    --primary-color: #f87060;
+    --primary-dark-color: #921609;
+    --white-color: #f1faee;
+}
+
+body{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    background: var(--bg-color);
+    /* padding: 10px; */
+    flex-direction: column;
+    
+}
+
+h1{
+    text-align: center;
+    color: var(--primary-color);
+    margin: 12px;
+    /* background: red; */
+}
+
+#login{
+    /* position: relative;
+    top: 0; */
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 90%;
+    gap: 10px;
+    max-width: 300px;
+}
+
+#login h2{
+  color: white;
+}
+
+#login input{
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+
+#joinBtn{
+    all: unset;
+    padding: 10px 20px;
+    background: var(--primary-color);
+    color: var(--bg-color);
+    border-radius: 5px;
+}
+
+#joinBtn:hover{
+    background: var(--primary-dark-color);
+    color: white;
+}
+
+#chatroom{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    /* border: 2px solid black; */
+    background: rgba(31, 31, 31, 0.512);
+    height: calc(100vh);
+    width: 100%;
+    position: relative;
+    /* overflow: auto; */
+}
+
+.profile{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 30px;
+    background: black;
+    z-index: 1;
+}
+
+#user-name{
+    /* background: blue; */
+    color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#logoutUser{
+  all: unset;
+  color: white;
+  padding: 5px 20px;
+  background: grey;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#logoutUser:hover{
+  background: var(--primary-color);
+}
+
+
+#chatroom #messages{
+    /* background: red; */
+    padding: 0px 20px 0px 20px;
+    width: 100%;
+    /* height: calc(100% - 40px); */
+    /* height: 100%; */
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    gap: 5px;
+    margin-bottom: 55px;
+    margin-top: 65px;
+    overflow: auto;
+}
+
+#messages p{
+    font-size: clamp(12px, 2vw, 16px);
+}
+
+.send-field{
+    /* background: green; */
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}
+
+#message{
+    max-width: 300px;
+    width: 100%;
+    padding: 10px;
+    height: 30px;
+    border-radius: 10px 0 0 10px;
+    border: none;
+}
+
+#sendBtn{
+    all: unset;
+    padding: 5px 15px;
+    /* background: rgb(66, 66, 255); */
+    background: var(--primary-color);
+    color: var(--bg-color);
+    border-radius: 0 10px 10px 0;
+}
+
+#sendBtn:hover{
+    background: var(--primary-dark-color);
+    color: white;
+}
+
+.connect {
+    color: white;
+    font-style: italic;
+}
+
+.sender {
+    /* background-color: #4CAF50; */
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 5px 10px;
+    border-radius: 10px 10px 0px 10px;
+    align-self: flex-end;
+    /* position: absolute;
+    right: 0; */
+}
+
+.receiver {
+    /* background-color: #008CBA; */
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 5px 10px;
+    border-radius: 0px 10px 10px 10px;
+    /* position: absolute;
+    left: 0; */
+    align-self: flex-start;
+}
+
+.notice_text{
+    margin: 20px 10px;
+    padding: 10px 20px;
+    background-color: #f4ab36;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  
+  
+  #notificationContainer {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  .notification {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #f4ab36;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s ease-out;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .success{
+    background-color: #0dcb75;
+  }
+
+  .error{
+    background-color: #f43636;
+  }
+  
+  .notification .message {
+    font-size: 14px;
+    flex: 1;
+  }
+  
+  .notification .close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .notification .progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.7);
+    animation: progress 3s linear;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes progress {
+    from {
+      width: 100%;
+    }
+    to {
+      width: 0;
+    }
+  }
+  

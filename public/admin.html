@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="admin-login">
+        <h2>Admin Login</h2>
+        <input type="password" id="adminPass" placeholder="Enter Admin Password">
+        <button id="adminLoginBtn">Login</button>
+    </div>
+    <div id="admin-panel" style="display: none;">
+        <h2>Set Chatroom ID</h2>
+        <input type="text" id="chatroomID" placeholder="Enter Chatroom ID">
+        <button id="setRoomBtn">Start Room</button>
+        <button id="logoutAdmin">Logout</button>
+    </div>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/script/admin.js"></script>
+</body>
+</html>
